@@ -9,47 +9,39 @@
 </head>
 <body>
   <div class="container">
-
     <h1>PNA Tracker</h1>
 
-    <!-- 🔹 LOGIN FORM -->
-    <div id="login">
-      <h2>Login</h2>
-      <input type="email" id="email" placeholder="Email" />
-      <input type="password" id="password" placeholder="Password" />
-      <button onclick="login()">Login</button>
+    <!-- Date Input -->
+    <label for="date">Date:</label>
+    <input type="date" id="date" />
+
+    <!-- Shift Inputs -->
+    <label for="shift1">Shift 1 PNA:</label>
+    <input type="number" id="shift1" />
+
+    <label for="shift2">Shift 2 PNA:</label>
+    <input type="number" id="shift2" />
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <button onclick="saveEntry()" class="save">Save Entry</button>
+      <button onclick="loadEntry()" class="load">Load Entry</button>
+      <button onclick="clearEntry()" class="clear">Clear Entry</button>
     </div>
 
-    <!-- 🔹 DASHBOARD (hidden until login) -->
-    <div id="tracker" style="display:none;">
-      <label for="date">Date:</label>
-      <input type="date" id="date" />
+    <!-- Month Input + Export -->
+    <label for="month">Month:</label>
+    <input type="month" id="month" />
+    <button onclick="exportMonthToExcel()" class="export">Export Month to Excel</button>
 
-      <label for="shift1">Shift 1 PNA:</label>
-      <input type="number" id="shift1" />
-
-      <label for="shift2">Shift 2 PNA:</label>
-      <input type="number" id="shift2" />
-
-      <div class="btn-group">
-        <button onclick="saveEntry()" class="save">Save Entry</button>
-        <button onclick="loadEntry()" class="load">Load Entry</button>
-        <button onclick="clearEntry()" class="clear">Clear Entry</button>
-      </div>
-
-      <label for="month">Month:</label>
-      <input type="month" id="month" />
-      <button onclick="exportMonthToExcel()" class="export">Export Month to Excel</button>
-
-      <div id="preview">
-        <strong>Data Preview</strong>
-        <pre id="dataPreview"></pre>
-      </div>
+    <!-- Data Preview -->
+    <div id="preview">
+      <strong>Data Preview</strong>
+      <pre id="dataPreview"></pre>
     </div>
   </div>
 
-  <!-- 🔹 Supabase library -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <!-- JS Files -->
   <script src="script.js"></script>
 </body>
 </html>
