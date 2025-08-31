@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbwhJar4646CRumRin1DyHj2NlQMnqfxnl1VyDqEeo1JKUuZ8_c-cyCd_iSFwMo5xgruDw/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbw1irenMRHo7hTt9lRlElJ4ozGgWpXo7H4hmqQScDYuxntSxER37qURv1yfbXVnWtRrWw/exec";
 
 function saveEntry() {
   const date = document.getElementById("date").value;
