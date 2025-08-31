@@ -1,5 +1,5 @@
 // 🔑 Web App URL from Google Apps Script
-const scriptURL = "https://script.google.com/macros/s/AKfycbyYOUR_URL/exec";
+const scriptURL = "https://script.google.com/u/0/home/projects/1ryfeFp53KOwc6ZwcG7vwBH3OvYOTyQkLBk_vLa0W_4GUGNcI3Ory0B40/edit;
 
 function saveEntry() {
   const date = document.getElementById("date").value;
